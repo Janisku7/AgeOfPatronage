@@ -16,13 +16,14 @@ namespace AgeOfPatronage.Server.Controllers
         };
 
         [HttpGet("[action]")]
-        public IEnumerable<WeatherForecast> WeatherForecasts()
+        public IEnumerable<Patronates> WeatherForecasts()
         {
             var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            return Enumerable.Range(1, 7).Select(index => new Patronates
             {
                 Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
+                Patron = rng.ToString(),
+                
                 Summary = Summaries[rng.Next(Summaries.Length)]
             });
         }

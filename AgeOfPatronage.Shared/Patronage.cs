@@ -4,11 +4,12 @@ using System.Text;
 
 namespace AgeOfPatronage.Shared
 {
-    public class WeatherForecast
+    public class Patronates
     {
         public DateTime Date { get; set; }
-        public int TemperatureC { get; set; }
+        public string Patron { get; set; }
+        public Tiers Tier { get; set; }
         public string Summary { get; set; }
-        public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+        
     }
 }
